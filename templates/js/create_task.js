@@ -12,10 +12,3 @@ $(document).ready(function() {
         }
     });
 });
-//}).done(function(){});
-//$(".list-item.selected").each(function(){
-//    $(this).toggleClass("selected")
-//});
-//[$('#highlight').live('keyup', function (){
-//    $(".list-item.selected").text($(this).val())
-//});
