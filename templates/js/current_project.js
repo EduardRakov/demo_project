@@ -17,14 +17,3 @@ $(document).ready(function () {
         $(this).toggleClass("selected")
     });
 });
-//});
-//var elm = $("#projects");
-//$('#projects').on('click', 'a' function () {
-//});
-//    $('#projects').load($(this).attr('href'));
-//    this.className = "list-item selected";
-//    event.preventDefault();
-
-//        $("a.list-item.selected").each(function(){
-//            $(this).toggleClass("selected")
-//        });
