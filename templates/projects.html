@@ -1,0 +1,11 @@
+<div class="tab-contents">
+    {% for project in projects %}
+        <div>
+            <div class="drag_target">
+                <a class="list-item" project_id="{{ project.id }}">
+                    <span class="label-text">{{ project }}</span>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

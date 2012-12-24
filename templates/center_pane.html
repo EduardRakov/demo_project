@@ -1,0 +1,49 @@
+<div id="center_pane" style="left: 0px; width: 90%; height: 100%;">
+    <div>
+        <div id="project_header">
+            <div>
+                <div class="header-button-bar">
+                    <div class="loading-boundary">&nbsp;
+                        <a class="dropdown-menu-link  " tabindex="-1">
+                        </a></div>
+                </div>
+                <div>
+                    <div id="project_title" class="project-title ">
+                        <span class="autogrow-textarea">
+                            <textarea id="project_name" project_id="{{ project.id }}" class="header-name"
+                                      style="height: 35px;">{{ project }}</textarea>
+                        </span>
+                    </div>
+                    <div id="project_notes" class="pot-view"></div>
+                </div>
+            </div>
+            <div class="loading-boundary">
+                <div>
+                    <div class="toolbar main-bar">
+                        <div class="gutter-left"></div>
+                        <div class="gutter-right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column-contents2 known-list" style="height: 90%;" id="center_pane__contents">
+        <div>
+            <div class="grid-uncompact">
+                <div class="loading-boundary">
+                    <div class="item-list-groups">
+                        <span>
+                            <p group_id="SPECIAL_GROUP_UPCOMING" class="group upcoming_group"></p>
+                            <div style="position: relative;">
+                                <div id="tasks_table" style="position: relative;">
+                                       {% include "tasks.html" %}
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

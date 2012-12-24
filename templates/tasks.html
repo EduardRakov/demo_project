@@ -1,0 +1,33 @@
+<table id="grid">
+    <tbody id="table">
+        {% for task in tasks %}
+            <tr class="main task-row no-group">
+{#            completed task-row no-group completed recently_completed grid-row-selected focused#}
+                <td class="grid_cell_item_number drag_hand">
+                    {{ forloop.counter }}
+                </td>
+                <td class="grid_cell_boolean" id="completed">
+                <span>
+                    <span class="completed-checkbox-sibling">
+                    </span>
+{#                    <span id="luna46" class="completed-checkbox">#}
+                        <input class="completed-checkbox" type="checkbox" name="">
+{#                    </span>#}
+                </span>
+                </td>
+                <td class="grid_cell_string non_insert_mode">
+                    <div>
+                        <input type="text" autocomplete="off"
+                               class="task-row-text-input" tabindex="-1" task_id="{{ task.id }}" onfocus="undefined"
+                               value="{{ task }}">
+                        <div class="task-row-overlay grid-tags-and-date">
+                            <div class="button" id="luna33">
+                                <span class="button-icon show-details"></span>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

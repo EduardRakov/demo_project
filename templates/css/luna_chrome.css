@@ -1,0 +1,149 @@
+#fatal_error_dialog {
+  background: #f2f2f2;
+  padding: 14px;
+  border: 1px solid #9CACBC;
+  position: absolute;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  width: 509px;
+  color: #596573; }
+  #fatal_error_dialog .reload-icon {
+    float: left;
+    background: url(https://app.asana.com/-/static/apps/asana/media/sprite.png?61c23d7f142099069b521aded960338f) -200px -1600px no-repeat;
+    height: 51px;
+    width: 51px;
+    margin-right: 14px; }
+  #fatal_error_dialog p {
+    margin-bottom: 10px; }
+
+.error-heading {
+  font-size: 27px;
+  font-weight: 800;
+  padding-bottom: 6px;
+  vertical-align: middle;
+  line-height: 51px;
+  text-shadow: 0px 1px #fff; }
+
+.error-subheading {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 14px;
+  text-shadow: 0px 1px #fff; }
+
+.error-directions, .error-contact {
+  clear: both;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px; }
+
+#fatal_error_dialog #error_info {
+  font-size: 14px;
+  color: #6E7E91;
+  margin-top: 14px; }
+  #fatal_error_dialog #error_info strong {
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 5px; }
+
+.error-buttons {
+  text-align: right;
+  font-size: 14px;
+  padding-top: 14px; }
+  .error-buttons input[type="button"] {
+    margin-left: 5px; }
+
+#error_message_box {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 10001;
+  background: #434C56;
+  border: 1px solid #1A232E;
+  color: #DDE4EA;
+  border-left: 0px;
+  border-bottom: 0px;
+  padding: 14px;
+  padding-bottom: 30px;
+  border-radius: 0px 3px 0px 0px;
+  -webkit-border-radius: 0px 3px 0px 0px; }
+  #error_message_box .reconnect-button {
+    margin-left: 10px; }
+  #error_message_box .primary-explanation {
+    font-weight: 600;
+    margin-bottom: 10px; }
+  #error_message_box .reconnect-explanation {
+    margin-bottom: 5px; }
+    #error_message_box .reconnect-explanation .time-remaining {
+      display: inline-block;
+      width: 210px; }
+  #error_message_box .secondary-explanation {
+    font-size: 80%; }
+    #error_message_box .secondary-explanation .message {
+      margin-right: 1.5ex; }
+
+#error_message_box a.explain_link {
+  color: #ECF0F3;
+  text-decoration: underline; }
+
+#debug_console_bar {
+  width: 100%;
+  display: inline-block;
+  background: gray;
+  color: #EEE;
+  /* We want the console above dialogs so that it is always accessible. */
+  z-index: 1000; }
+  #debug_console_bar a.debug-link {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white; }
+  #debug_console_bar .counter {
+    display: inline-block;
+    width: 20px;
+    text-align: right; }
+  #debug_console_bar .time {
+    display: inline-block;
+    width: 60px;
+    text-align: right; }
+
+#debug_console_window {
+  height: 100%;
+  background: #F0F0F2;
+  padding: 8px; }
+  #debug_console_window .title {
+    font-size: 13px;
+    font-weight: bold; }
+  #debug_console_window .notes {
+    font-size: 11px;
+    padding-top: 2px; }
+  #debug_console_window .counters {
+    font-size: 11px; }
+    #debug_console_window .counters .counter div {
+      background: #E0E0E5;
+      color: #3C3C46; }
+    #debug_console_window .counters .counter.counter-header div {
+      margin-top: 8px;
+      background: #D6D6DB;
+      font-weight: bold; }
+    #debug_console_window .counters .counter .counter-name {
+      padding: 2px;
+      margin: 2px;
+      clear: left;
+      float: left;
+      width: 200px; }
+    #debug_console_window .counters .counter .counter-value {
+      padding: 2px;
+      margin: 2px;
+      float: left;
+      width: 50px;
+      text-align: right; }
+      #debug_console_window .counters .counter .counter-value:nth-child(n+3) {
+        background: #EAEAEE; }
+
+/*
+Highlight new elements in the dom. We highlight all children of new elements so
+that we notice if an element is added even when it is fully covered by children
+that were in the dom before.
+*/
+*[new_element="1"] * {
+  background-color: red !important; }

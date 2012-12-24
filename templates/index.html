@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %} DemoProject {% endblock %}
+{% block content %}
+    <div id="navigation_dock" style="height: 95%;">
+        <div id="left_pane">
+            <div class="bg-pattern"></div>
+            <div id="header">
+                <div id="logo"><img src="/static/img/logo_glow.png"></div>
+                <span class="typeahead multi-sectioned" style="position: relative;">
+                    <input type="text"
+                           autocomplete="off"
+                           id="nav_search_input"
+                           class="generic-input showing search-box"
+                           placeholder="Search">
+                </span>
+            </div>
+            <div id="navigation_dock_main_contents">
+                <div id="navigation_dock_body">
+                    <div class="loading-boundary">
+                        <div id="navigation_dock_network" class="network-zoom">
+                            <ul class="tab-view ">
+                                <li class="projects_tab tab selected "><a>Projects</a></li>
+                                <li class="tags_tab tab unselected " id="luna2"><a>Tags</a></li>
+                                <li class="people_tab tab unselected "><a>People</a></li>
+                            </ul>
+                            <div id="projects">
+                                {% include 'projects.html' %}
+                            </div>
+                            <div class="list-section " id="navigation-dock-pot-list"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="center_pane_container" style="left: 251px; top: 0px; width: 90%; height: 98%; position: absolute;">
+        {% include "center_pane.html" %}
+    </div>
+{% endblock %}
+{% block footer %}
+    <div id="footer" style="width: 18.5%">
+        <div id="navigation_dock_action_bar">
+            <div id="add_project_button" class="action-button toolbar-button add-project">
+                <span class="button-icon add-project"></span>
+                <span class="button-text">New Project</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
